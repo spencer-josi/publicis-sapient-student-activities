@@ -11,51 +11,58 @@
         <table>
             <tr>
                 <td>
-                    <label>Name: <input type="text" name="name" /></label>
+                    <label>Name</label>
+                </td>
+                <td>
+                  <input type="text" name="name" id="name" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label>
-                        Password:<input type="password" name="password" /> 
-                    </label>
+                    <label>Password: </label>
+                </td>
+                <td>
+                  <input type="password" name="password" />
                 </td>
             </tr>
             <tr>
+              <td>
+                <label> Gender: </label>
+              </td>
                 <td>
-                    <label>
-                        Gender
-                        <input type="radio" name="gender" value="M">M</input>
-                        <input type="radio" name="gender" value="F" />F</input>
-                    </label>
+                  <input type="radio" name="gender" value="M">M</input>
+                  <input type="radio" name="gender" value="F" />F</input>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <label>
-                        Skills:
-                        <input type="checkbox" name="skills" value="c">C</input>
-                        <input type="checkbox" name="skills" value="Java">Java</input>
-                        <input type="checkbox" name="skills" value="HTML">HTML</input>
-                    </label>
-                </td>
+              <td>
+                <label>Skills</label>
+              </td>
+              <td>
+                <input type="checkbox" name="skills" value="c">C</input>
+                <input type="checkbox" name="skills" value="Java">Java</input>
+                <input type="checkbox" name="skills" value="HTML">HTML</input>
+              </td>
             </tr>
             <tr>
-                <td>
-                    <select name="quals">
-                        Qualification:
-                        <option value="High school diploma">High school diploma</option>
-                        <option value="Bachelor's">Bachelor's</option>
-                        <option value="Master's">Master's</option>
-                    </select>
-                </td>
+              <td>
+                <label>Qualifications</label>
+              </td>
+              <td>
+                <select name="quals">
+                    <option value="High school diploma">High school diploma</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="Master's">Master's</option>
+                </select>
+              </td>
             </tr>
             <tr>
-                <td>
-                    <label>
-                        Date of Birth <input type="date" name="dob" />
-                    </label>
-                </td>
+              <td>
+                <label>Date of Birth</label>
+              </td>
+              <td>
+                <input type="date" name="dob" />
+              </td>
             </tr>
         </table>
         <input type="submit" value="Register" />
