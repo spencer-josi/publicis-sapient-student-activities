@@ -1,0 +1,20 @@
+div {
+    border: 5px solid red;
+}
+
+.outer {
+    height: 100px;
+    margin: 5px 5px;
+}
+
+.inner {
+    display: inline-block;
+    height: 200px;
+    width: 28.2%;
+}
+
+.middle {
+    display: inline-block;
+    height: 200px;
+    width: 40%;
+}

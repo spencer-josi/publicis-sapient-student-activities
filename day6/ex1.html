@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Form</h2>
+    <form method="post" action="#">
+        <table>
+            <tr>
+                <td>
+                    <label>Name: <input type="text" name="name" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Password:<input type="password" name="password" /> 
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Gender
+                        <input type="radio" name="gender" value="M">M</input>
+                        <input type="radio" name="gender" value="F" />F</input>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Skills:
+                        <input type="checkbox" name="skills" value="c">C</input>
+                        <input type="checkbox" name="skills" value="Java">Java</input>
+                        <input type="checkbox" name="skills" value="HTML">HTML</input>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="quals">
+                        Qualification:
+                        <option value="High school diploma">High school diploma</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Master's">Master's</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Date of Birth <input type="date" name="dob" />
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Register" />
+        <input type="reset" value="Reset" />
+    </form>
+</body>
+</html>
