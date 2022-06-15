@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sus</title>
+</head>
+<body>
+    <div>
+        <h2 id="mainText">sus1</h2>
+        <img id="mainIMG" src="sus1.png" width=500 height=400/>
+    </div>
+    <div onClick="changeImage(event)">
+        <img src="sus1.png" width=100 height=150/>
+        <img src="sus2.png" width=100 height=150/>
+        <img src="sus3.jpg" width=100 height=150/>
+    </div>
+
+    <script>
+        function changeImage(e) {
+            let mainImg = document.getElementById('mainIMG');
+            let mainTxt = document.getElementById('mainText');
+            let target = e.target;
+            if (target.tagName === 'IMG') {
+                mainImg.src = target.src;
+                let name = target.src.split('/')[4];
+                name = name.replace('.jpg','');
+                name = name.replace('.png', '');
+                mainTxt.innerText = name
+            }
+
+        }
+    </script>
+</body>
+</html>

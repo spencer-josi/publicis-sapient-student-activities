@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads or Tails</title>
+</head>
+<body>
+    <h1>Heads or Tails?</h1>
+    <button id="heads" onClick="flipCoin(event)">Heads</button>
+    <button id="tails" onClick="flipCoin(event)">Tails</button>
+    <h3 id="record">Record: 0 - 0</h3>
+    <h2 id="result"></h2>
+</body>
+<script type="text/javascript">
+var totalGames = 0;
+var wins = 0;
+function flipCoin(e) {
+    
+    let choice = e.target.innerText;
+    let solution = Math.round(Math.random());
+    let resultMsg = document.getElementById('result');
+    let recordMsg = document.getElementById('record');
+    totalGames++;
+    if (solution == 1) {
+        solution = "Heads";
+    }
+    else {
+        solution = "Tails";
+    }
+
+    if (choice === solution) {
+        resultMsg.innerText = "CONGRATZ";
+        wins++;
+    }
+    else {
+        resultMsg.innerText = "YOU LOST";
+    }
+    recordMsg.innerText = `Record: ${wins} - ${totalGames - wins}`
+}
+</script>
+</html>

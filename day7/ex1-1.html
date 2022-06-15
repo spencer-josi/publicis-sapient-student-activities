@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sample">Click the buttons to change the text</p>
+    <button onClick="bold()" type="checkbox" value="Bold">Bold</button>
+    <button onClick="italicize()" type="checkbox" value="Italicize">Italcize</button>
+    <button onClick="underline()" type="checkbox" value="Underline">Underline</button>
+    <script type="text/javascript">
+    function bold() {
+        let para = document.getElementById("sample");
+        if (para.style.fontWeight === 'bold') {
+            para.style.fontWeight = '';
+        } else {
+            para.style.fontWeight = 'bold';
+        } 
+    }
+
+    function italicize() {
+        let para = document.getElementById("sample");
+        if (para.style.fontStyle === 'italic') {
+            para.style.fontStyle = '';
+        } else {
+            para.style.fontStyle = 'italic';
+        } 
+    }
+
+    function underline() {
+        let para = document.getElementById("sample");
+        if (para.style.textDecoration === 'underline') {
+            para.style.textDecoration = '';
+        } else {
+            para.style.textDecoration = 'underline';
+        } 
+    }
+    </script>
+
+</body>
+</html>

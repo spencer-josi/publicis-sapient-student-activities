@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Form</h2>
+    <form method="post" action="#" name="create" onSubmit="return handleSubmit()">
+        <table>
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>
+                  <input type="text" name="name" id="name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name: </label>
+                </td>
+                <td>
+                  <input type="lastname" name="lastname" />
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <label> Gender: </label>
+              </td>
+                <td>
+                  <input type="radio" name="gender" value="M">M</input>
+                  <input type="radio" name="gender" value="F" />F</input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Password: </label>
+                </td>
+                <td>
+                  <input type="password" name="password" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password: </label>
+                </td>
+                <td>
+                  <input type="password" name="confirm" />
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Skills</label>
+              </td>
+              <td>
+                <input type="checkbox" name="skills" value="c">C</input>
+                <input type="checkbox" name="skills" value="Java">Java</input>
+                <input type="checkbox" name="skills" value="HTML">HTML</input>
+              </td>
+            </tr>
+        </table>
+        <input type="submit" value="Register" />
+    </form>
+    <script type="text/javascript">
+        function handleSubmit() {
+            let submitForm = document.create;
+            let username = submitForm.name;
+            let lastname = submitForm.lastname;
+            let gender = submitForm.gender;
+            let pass = submitForm.password;
+            let confirmPass = submitForm.confirm;
+            let skills = submitForm.skills;
+            if (username.value.length < 3) {
+                alert("Need more characters for first name");
+                return false;
+            }
+            if (lastname.value.length < 2) {
+                alert("Need more characters for last name");
+                return false;
+            }
+            if (gender.value.length == 0) {
+                alert("Select a gender yo");
+                return false;
+            }
+            if (pass.value !== confirmPass.value) {
+                alert("Passwords not equal yo")
+                return false;
+            }
+            console.log(skills)
+            let skillSelected = false;
+            for (let i = 0; i < skills.length; i++) {
+                if (skills[i].checked) {
+                    skillSelected = true;
+                }
+            }
+            if (!skillSelected) {
+                alert("select a skill yo");
+                return false;
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

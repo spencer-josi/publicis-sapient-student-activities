@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+</head>
+<body>
+    <h1 id="change">CHANGE MY COLOR!!!</h1>
+    <label>
+        Red: <input id="red" type="range" min="0" max="255" oninput="changeColor(event)">
+    </label>
+
+    <label>
+        Blue: <input id="blue" type="range" min="0" max="255" oninput="changeColor(event)">
+    </label>
+
+    <label>
+        Green: <input id="green" type="range" min="0" max="255" oninput="changeColor(event)">
+    </label>
+</body>
+<script type="text/javascript">
+function changeColor(e) {
+    let h1 = document.getElementById('change');
+
+    let redSlider = document.getElementById('red');
+    let red = redSlider.value
+
+    let blueSlider = document.getElementById('blue');
+    let blue = blueSlider.value
+
+    let greenSlider = document.getElementById('green');
+    let green = greenSlider.value
+
+    h1.style.color = `rgb(${red}, ${green}, ${blue})`
+}
+</script>
+</html>
