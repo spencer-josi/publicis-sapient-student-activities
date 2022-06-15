@@ -15,11 +15,11 @@
             for (let j = 0; j < 8; j++) {
                 let y = i * 50;
                 let x = j * 50;
-                if ((i + j) % 2 != 0) {
-                    canvas.fillStyle = 'black';
+                if ((i + j) % 2 == 0) {
+                    canvas.fillStyle = 'white';
                 }
                 else {
-                    canvas.fillStyle = 'white';
+                    canvas.fillStyle = 'black';
                 }
                 canvas.fillRect(x, y, width, height);
             }
