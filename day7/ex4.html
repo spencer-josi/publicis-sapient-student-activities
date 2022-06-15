@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <canvas id="c1" width="400" height="400"></canvas>
+    <script>
+        let canvas = document.getElementById('c1').getContext('2d');
+        let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+        let w = 100;
+        for (let i = 0; i < 7; i++) {
+            canvas.beginPath();
+            canvas.arc(200, 200, w, 0, Math.PI, true);
+            canvas.fillStyle = colors[i];
+            canvas.fill();
+            w = w - 15;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
