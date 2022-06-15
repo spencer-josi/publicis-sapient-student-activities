@@ -11,22 +11,17 @@
         let canvas = document.getElementById('c1').getContext('2d');
         let width = 50;
         let height = 50;
-        var white = false;
-        for (let i = 0; i < 8; i++) {
-            white = !white
+        for (let i = 0; i < 8; i++) { 
             for (let j = 0; j < 8; j++) {
-                let x = i * 50;
-                let y = j * 50;
-                canvas.fillRect(x, y, width, height);
-                console.log(x, y)
-                console.log(white);
-                if (white) {
-                    canvas.fillStyle = 'white';
-                }
-                else {
+                let y = i * 50;
+                let x = j * 50;
+                if ((i + j) % 2 != 0) {
                     canvas.fillStyle = 'black';
                 }
-                white = !white;
+                else {
+                    canvas.fillStyle = 'white';
+                }
+                canvas.fillRect(x, y, width, height);
             }
         }
     </script>
